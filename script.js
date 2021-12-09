@@ -1,31 +1,55 @@
-let paletaCores = document.getElementsByClassName('color');
-let cores = ['black', 'red', 'blue', 'green'];
+const paletaCores = document.getElementsByClassName('color');
+const cores = ['black', 'red', 'blue', 'green'];
+let i = 0;
 
-for (let i = 0; i < paletaCores.length; i += 1) {
-    paletaCores[i].style.backgroundColor = cores[i];
+for (i = 0; i < paletaCores.length; i += 1) {
+  paletaCores[i].style.backgroundColor = cores[i];
 }
 
+const getpixelBord = document.getElementById('pixel-board');
 
-let getpixelBord = document.getElementById('pixel-board');
-
-for (let i = 0; i < 25; i += 1) {
-    let createPixel = document.createElement('div');
-    createPixel.className = 'pixel'
-    getpixelBord.appendChild(createPixel);
+for (i = 0; i < 25; i += 1) {
+  const createPixel = document.createElement('div');
+  createPixel.className = 'pixel';
+  getpixelBord.appendChild(createPixel);
 }
 
-window.onload = function() {
-    paletaCores[0].className = 'color selected';
-}
+window.onload = function () {
+  paletaCores[0].className = 'color selected';
+};
 
-function mudaSelectCor() {
-    for (let i = 0; i < paletaCores.length; i += 1){
-        if (paletaCores[i].className === 'color selected') {
-            paletaCores[i].className = 'color';
-        }
+paletaCores[0].addEventListener('click', function () {
+    for (i = 0; i < paletaCores.length; i += 1){
+        paletaCores[i].className = 'color';
     }
-}
+    if (paletaCores[0].className !== 'color selected') {
+        paletaCores[0].classList.add('selected');
+    }
+});
 
-for (let i = 0; i < paletaCores.length; i += 1) {
-    paletaCores[i].addEventListener('click', mudaSelectCor); 
-}
+paletaCores[1].addEventListener('click', function () {
+    for (i = 0; i < paletaCores.length; i += 1){
+        paletaCores[i].className = 'color';
+    }
+    if (paletaCores[1].className !== 'color selected') {
+        paletaCores[1].classList.add('selected');
+    }
+});
+
+paletaCores[2].addEventListener('click', function () {
+    for (i = 0; i < paletaCores.length; i += 1){
+        paletaCores[i].className = 'color';
+    }
+    if (paletaCores[2].className !== 'color selected') {
+        paletaCores[2].classList.add('selected');
+    }
+});
+
+paletaCores[3].addEventListener('click', function () {
+    for (i = 0; i < paletaCores.length; i += 1){
+        paletaCores[i].className = 'color';
+    }
+    if (paletaCores[3].className !== 'color selected') {
+        paletaCores[3].classList.add('selected');
+    }
+});
