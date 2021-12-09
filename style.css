@@ -1,21 +1,21 @@
 .color {
-    border: 1px solid black ;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
 }
 
 #pixel-board {
-    margin-top: 50px;
-    width: 205px;
+  margin-top: 50px;
+  width: 205px;
 }
 
 .pixel {
-    border: 1px solid black ;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-top: -5px;
-    margin-left: -1px;
-    background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-top: -5px;
+  margin-left: -1px;
+  background-color: white;
 }
