@@ -19,3 +19,8 @@
   margin-left: -1px;
   background-color: white;
 }
+
+#clear-board {
+    margin-top: -240px;
+    float: left;
+}
