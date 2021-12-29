@@ -54,6 +54,20 @@ paletaCores[3].addEventListener('click', function () {
     }
 });
 
+let selecBody = document.getElementsByTagName('body');
+let buttonClear = document.createElement('button');
+buttonClear.innerText = 'Limpar';
+buttonClear.id = 'clear-board';
+selecBody[0].appendChild(buttonClear);
+
+function clearColor () {
+    for(i = 0; i < getPixel.length; i += 1){
+        getPixel[i].style.backgroundColor = 'white';
+    }
+}
+
+buttonClear.addEventListener('click', clearColor);
+
 const getPixel = document.getElementsByClassName('pixel');
 const getSelectColor = document.getElementsByClassName('selected');
 
@@ -131,16 +145,4 @@ getPixel[23].addEventListener('click', function () {
 });
 getPixel[24].addEventListener('click', function () {
     getPixel[24].style.backgroundColor = getSelectColor[0].style.backgroundColor;
-});
-
-let selecBody = document.getElementsByTagName('body');
-let buttonClear = document.createElement('button');
-buttonClear.innerText = 'Limpar';
-buttonClear.id = 'clear-board';
-selecBody[0].appendChild(buttonClear);
-
-buttonClear.addEventListener('click', function () {
-    for(i = 0; i < getPixel.length; i += 1){
-        getPixel[i].style.backgroundColor = 'white';
-    }
 });
