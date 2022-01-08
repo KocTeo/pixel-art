@@ -6,7 +6,7 @@
 }
 
 #pixel-board {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 205px;
 }
 
@@ -20,19 +20,11 @@
   background-color: white;
 }
 
+.board-interactions {
+  display: flex;
+  align-items: flex-start;
+}
+
 #clear-board {
-  float: left;
-  margin-top: -240px;
-}
-
-#generate-board {
-  float: left;
-  margin-top: -240px;
-  margin-left: 265px;
-}
-
-#board-size {
-  float: left;
-  margin-top: -240px;
-  margin-left: 75px;
+  margin-right: 25px;
 }

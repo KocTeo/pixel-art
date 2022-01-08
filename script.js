@@ -65,10 +65,7 @@ paletaCores[3].addEventListener('click', function () {
 });
 
 const selecBody = document.getElementsByTagName('body');
-const buttonClear = document.createElement('button');
-buttonClear.innerText = 'Limpar';
-buttonClear.id = 'clear-board';
-selecBody[0].appendChild(buttonClear);
+const buttonClear = document.querySelector('#clear-board');
 
 function clearColor() {
   for (i = 0; i < getPixel.length; i += 1) {
@@ -91,27 +88,23 @@ function colorPixel(event) {
   }
 }
 
-const createBoard = document.createElement('input');
-createBoard.id = 'board-size';
-selecBody[0].appendChild(createBoard);
-createBoard.type = 'number';
-createBoard.min = 1;
+const createBoard = document.querySelector('#board-size');
 
-const createButtonInput = document.createElement('button');
-createButtonInput.id = 'generate-board';
-createButtonInput.innerText = 'VQV';
-selecBody[0].appendChild(createButtonInput);
+const createButtonInput = document.querySelector('#generate-board');
 
 createButtonInput.addEventListener('click', newBoard);
 
 function newBoard() {
-  for (i = getPixel.length - 1; i >= 0; i -= 1) {
+  if(createBoard.value < 1) {
+    window.alert('Board inválido!');
+  }
+  for(i = getPixel.length - 1; i >= 0; i -= 1) {
     getPixel[i].remove();
   }
-  if (createBoard.value > 50) {
+  if(createBoard.value > 50) {
     createBoard.value = 50;
   }
-  if (createBoard.value < 5) {
+  if(createBoard.value < 5) {
     createBoard.value = 5;
   }
   for (i = 0; i < createBoard.value * createBoard.value; i += 1) {
