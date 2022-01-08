@@ -1,6 +1,17 @@
 const paletaCores = document.getElementsByClassName('color');
-const cores = ['black', 'red', 'blue', 'green'];
+const cores = ['black', gerar_cor(), gerar_cor(), gerar_cor()];
 let i = 0;
+
+function gerar_cor() {
+
+  let r = parseInt(Math.random() * 255);
+  let g = parseInt(Math.random() * 255);
+  let b = parseInt(Math.random() * 255);
+
+  let cor = `rgb(${r}, ${g}, ${b})`;
+
+  return cor;
+}
 
 for (i = 0; i < paletaCores.length; i += 1) {
   paletaCores[i].style.backgroundColor = cores[i];
